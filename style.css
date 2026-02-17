@@ -16,46 +16,59 @@ body {
 
 .home {
     height: 100vh;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    background: url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1600&q=80") no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.home::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.65);
 }
 
 .container {
+    position: relative;
     text-align: center;
     color: white;
     animation: fadeIn 1.5s ease-in-out;
 }
 
 .title {
-    font-size: 40px;
-    margin-bottom: 50px;
+    font-size: 45px;
+    margin-bottom: 60px;
     font-weight: bold;
+    text-shadow: 0 0 15px rgba(255,255,255,0.6);
 }
 
 .poems-list {
     display: flex;
-    gap: 25px;
+    gap: 30px;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .poem-card {
-    background: white;
-    color: #203a43;
-    padding: 20px 45px;
-    border-radius: 15px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 20px 50px;
+    border-radius: 20px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
-    transition: 0.3s ease;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: 0.4s ease;
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
 }
 
 .poem-card:hover {
-    background: #f2f2f2;
-    transform: translateY(-8px);
+    background: rgba(255,255,255,0.3);
+    transform: translateY(-10px) scale(1.05);
 }
 
 /* ========================= */
@@ -63,61 +76,75 @@ body {
 /* ========================= */
 
 .poem-page {
-    background: #f4f6f9;
     min-height: 100vh;
+    background: url("https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=1600&q=80") no-repeat center center/cover;
+    position: relative;
+}
+
+.poem-page::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
 }
 
 .header {
-    background: linear-gradient(90deg, #2c5364, #203a43);
+    position: relative;
+    background: linear-gradient(90deg, #d4af37, #b8860b);
     color: white;
     text-align: center;
     padding: 25px;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
     letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
 }
 
 .poem-container {
-    max-width: 850px;
-    margin: 60px auto;
-    background: white;
-    padding: 50px;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    position: relative;
+    max-width: 900px;
+    margin: 80px auto;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(15px);
+    padding: 60px;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
     text-align: center;
-    animation: fadeIn 1.2s ease-in-out;
+    color: white;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .poem-container h2 {
     font-family: 'Amiri', serif;
-    font-size: 36px;
+    font-size: 40px;
     margin-bottom: 40px;
-    color: #203a43;
+    color: #ffd700;
 }
 
 .poem-container p {
     font-family: 'Amiri', serif;
-    font-size: 26px;
-    line-height: 2.2;
+    font-size: 28px;
+    line-height: 2.3;
     white-space: pre-line;
-    color: #444;
 }
 
 .back-btn {
     display: inline-block;
-    margin-top: 40px;
-    padding: 12px 30px;
-    background: #203a43;
+    margin-top: 50px;
+    padding: 14px 35px;
+    background: linear-gradient(90deg, #d4af37, #b8860b);
     color: white;
     text-decoration: none;
-    border-radius: 10px;
-    transition: 0.3s ease;
-    font-size: 18px;
+    border-radius: 12px;
+    transition: 0.4s ease;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .back-btn:hover {
-    background: #2c5364;
-    transform: scale(1.05);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px gold;
 }
 
 /* ========================= */
@@ -127,7 +154,7 @@ body {
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(40px);
     }
     to {
         opacity: 1;
