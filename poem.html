@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عرض القصيدة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="poem-container">
+        <h1>قصيدتك</h1>
+        <pre id="poemDisplay"></pre>
+        <a href="index.html" class="back-button">العودة للاختيار</a>
+    </div>
+
+    <script>
+        // جلب النص من localStorage
+        const poem = localStorage.getItem('poemText');
+        const display = document.getElementById('poemDisplay');
+        if(poem){
+            display.textContent = poem;
+        } else {
+            display.textContent = "لم يتم إدخال أي قصيدة!";
+        }
+    </script>
+</body>
+</html>
