@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
+
 body {
     margin: 0;
     padding: 0;
@@ -8,6 +10,7 @@ body {
     text-align: center;
 }
 
+/* الصفحة الرئيسية */
 .home-container {
     padding: 100px 20px;
 }
@@ -15,15 +18,21 @@ body {
 h1 {
     font-size: 40px;
     color: #ffd700;
+    margin-bottom: 40px;
 }
 
 .card {
     background: rgba(255, 255, 255, 0.1);
-    margin: 50px auto;
+    margin: 20px auto;
     padding: 30px;
     width: 300px;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 .btn {
@@ -41,6 +50,7 @@ h1 {
     background: white;
 }
 
+/* صفحة القصيدة */
 .poem-container {
     padding: 50px 20px;
 }
@@ -49,10 +59,10 @@ h1 {
     max-width: 800px;
     margin: auto;
     background: rgba(255, 255, 255, 0.08);
-    padding: 30px;
+    padding: 40px;
     border-radius: 15px;
     box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
-    font-size: 18px;
+    font-size: 22px;
     line-height: 2;
     text-align: right;
 }
