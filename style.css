@@ -1,67 +1,36 @@
 /* الخطوط والاتجاه */
 body {
-    font-family: 'Arial', sans-serif;
-    background: #fef6f0;
-    color: #333;
-    direction: rtl;
+    font-family: "Amiri", "Scheherazade", "Arial", sans-serif;
+    background-color: #fefcf8; /* خلفية مريحة للقراءة */
+    color: #222;               /* لون الخط أسود داكن */
+    direction: rtl;            /* اتجاه النص من اليمين لليسار */
+    line-height: 1.8;          /* ارتفاع الأسطر لراحة القراءة */
+    padding: 2rem;
     margin: 0;
-    padding: 0;
 }
 
-/* الحاوية العامة */
-.container, .poem-container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background: #fff8f0;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-}
-
-/* العنوان */
-h1 {
-    text-align: center;
-    color: #c33;
-    font-family: 'Tahoma', sans-serif;
-}
-
-/* مربع النص */
-textarea {
-    width: 100%;
-    height: 300px;
-    padding: 15px;
-    margin-top: 20px;
-    font-size: 16px;
+/* حاوية القصيدة */
+.poem-container {
+    max-width: 900px;          /* عرض مناسب للقراءة */
+    margin: 0 auto;            /* توسيط الحاوية */
+    padding: 2rem;
+    background-color: #fffdf8;
     border-radius: 10px;
-    border: 1px solid #ccc;
-    resize: vertical;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-/* الزر */
-button, .back-button {
+/* النص */
+.poem {
+    white-space: pre-wrap;     /* يحافظ على الأسطر والفواصل */
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* تحسين التباعد بين الفقرات الطويلة */
+.poem span {
     display: block;
-    margin: 20px auto;
-    padding: 12px 25px;
-    font-size: 16px;
-    background-color: #c33;
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
-    transition: 0.3s;
+    margin-bottom: 1rem;
 }
 
-button:hover, .back-button:hover {
-    background-color: #a00;
-}
-
-/* عرض النص */
-pre {
-    white-space: pre-wrap;       /* يحافظ على الأسطر */
-    word-wrap: break-word;
-    line-height: 1.8;
-    font-size: 18px;
-    color: #555;
-}
+/* اختيار الخط العربي الأمثل */
+@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
