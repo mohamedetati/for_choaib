@@ -1,163 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;700&display=swap');
-
-* {
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Cairo', sans-serif;
-}
-
-/* ========================= */
-/* الصفحة الرئيسية */
-/* ========================= */
-
-.home {
-    height: 100vh;
-    background: url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1600&q=80") no-repeat center center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.home::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.65);
-}
-
-.container {
-    position: relative;
-    text-align: center;
-    color: white;
-    animation: fadeIn 1.5s ease-in-out;
-}
-
-.title {
-    font-size: 45px;
-    margin-bottom: 60px;
-    font-weight: bold;
-    text-shadow: 0 0 15px rgba(255,255,255,0.6);
-}
-
-.poems-list {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.poem-card {
-    background: rgba(255,255,255,0.15);
-    backdrop-filter: blur(10px);
-    color: white;
-    padding: 20px 50px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-size: 22px;
-    font-weight: bold;
-    transition: 0.4s ease;
-    border: 1px solid rgba(255,255,255,0.3);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-}
-
-.poem-card:hover {
-    background: rgba(255,255,255,0.3);
-    transform: translateY(-10px) scale(1.05);
-}
-
-/* ========================= */
-/* صفحة القصيدة */
-/* ========================= */
-
-.poem-page {
-    min-height: 100vh;
-    background: url("https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=1600&q=80") no-repeat center center/cover;
-    position: relative;
-}
-
-.poem-page::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.75);
-}
-
-.header {
-    position: relative;
-    background: linear-gradient(90deg, #d4af37, #b8860b);
-    color: white;
-    text-align: center;
-    padding: 25px;
-    font-size: 26px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-}
-
-.poem-container {
-    position: relative;
-    max-width: 900px;
-    margin: 80px auto;
-    background: rgba(255,255,255,0.15);
-    backdrop-filter: blur(15px);
-    padding: 60px;
-    border-radius: 25px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-    text-align: center;
-    color: white;
-    animation: fadeIn 1.5s ease-in-out;
-}
-
-.poem-container h2 {
     font-family: 'Amiri', serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: white;
+    direction: rtl;
+    text-align: center;
+}
+
+.home-container {
+    padding: 100px 20px;
+}
+
+h1 {
     font-size: 40px;
-    margin-bottom: 40px;
     color: #ffd700;
 }
 
-.poem-container p {
-    font-family: 'Amiri', serif;
-    font-size: 28px;
-    line-height: 2.3;
-    white-space: pre-line;
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 50px auto;
+    padding: 30px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
 }
 
-.back-btn {
+.btn {
     display: inline-block;
-    margin-top: 50px;
-    padding: 14px 35px;
-    background: linear-gradient(90deg, #d4af37, #b8860b);
-    color: white;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: gold;
+    color: black;
     text-decoration: none;
-    border-radius: 12px;
-    transition: 0.4s ease;
-    font-size: 20px;
+    border-radius: 10px;
     font-weight: bold;
 }
 
-.back-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px gold;
+.btn:hover {
+    background: white;
 }
 
-/* ========================= */
-/* Animation */
-/* ========================= */
+.poem-container {
+    padding: 50px 20px;
+}
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.poem-box {
+    max-width: 800px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+    font-size: 18px;
+    line-height: 2;
+    text-align: right;
+}
+
+pre {
+    white-space: pre-wrap;
+    font-family: 'Amiri', serif;
+}
+
+footer {
+    margin-top: 60px;
+    padding: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    color: #ccc;
 }
